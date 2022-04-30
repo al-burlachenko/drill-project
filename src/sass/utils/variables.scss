@@ -1,0 +1,41 @@
+//Font: Rubik
+$h1-size: 35px; // Medium;
+$h2-size: 22px; // Semibold;
+$h3-size: 19px; // Medium;
+$h4-size: 17px; // Regular;
+$h5-size: 16px; // Regular;
+$h6-size: 12px; // Mixed;
+
+@mixin font-mixin($size, $height, $weight) {
+  font-family: 'Rubik', sans-serif;
+  font-size: $size;
+  line-height: $height / $size;
+  font-weight: $weight;
+  font-style: normal;
+
+  color: red;
+  //   letter-spacing: ;
+}
+
+%logo-font {
+  @include font-mixin(20px, 24px, 700);
+}
+
+%h1-font {
+  @include font-mixin(35px, 41px, 500);
+}
+%h2-font {
+  @include font-mixin(22px, 26px, 600);
+}
+// %h3-font {
+//   @include font-mixin(19px, , 500);
+// }
+%h4-font {
+  @include font-mixin(17px, 25px, 400);
+}
+%h5-font {
+  @include font-mixin(16px, 19px, 400);
+}
+// %h6-font {
+//   @include font-mixin(12px, $h6-height, $h6-weight);
+// }

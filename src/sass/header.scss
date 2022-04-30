@@ -1,0 +1,74 @@
+@import './utils/variables.scss';
+@import './utils/colors.scss';
+
+.header {
+  padding: 12px 4px 18px 12px;
+  display: flex;
+  align-items: center;
+
+  outline: 1px solid red;
+  &__language-layout {
+    margin-right: 25px;
+  }
+}
+
+.navigation {
+  margin-right: auto;
+  &__logo {
+    @extend %logo-font;
+    color: $primary-color;
+  }
+  &__logo > span {
+    color: $current-color;
+  }
+  &__menu {
+    display: none;
+  }
+}
+
+.menu {
+  &__item {
+  }
+}
+
+.language-layout {
+  width: 56px;
+  height: 43px;
+  padding: 12px 8px;
+  background-color: $current-color;
+  box-shadow: 0px 4px 20px rgba(13, 77, 42, 0.33);
+  border-radius: 4px;
+  &__item {
+    @extend %h5-font;
+    color: $white-color;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  &__item::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-left: 6px;
+    background-image: url('../images/svg/check.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 111;
+  }
+}
+
+.menu-btn {
+  width: 32px;
+  height: 32px;
+  // padding: 9px;
+  div {
+    width: 16px;
+    height: 14px;
+    background-color: black;
+  }
+}
+
+.contact {
+  display: none;
+}
