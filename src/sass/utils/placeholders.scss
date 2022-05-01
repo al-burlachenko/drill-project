@@ -1,7 +1,7 @@
 @mixin font-mixin($size, $height, $weight) {
   font-family: 'Rubik', sans-serif;
   font-size: $size;
-  line-height: calc($height / $size);
+  line-height: ($height/$size);
   font-weight: $weight;
   font-style: normal;
 
