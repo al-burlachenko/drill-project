@@ -2,12 +2,11 @@
   "name": "parcel-project-template",
   "version": "1.1.0",
   "description": "",
+  "main": "index.js",
   "homepage": "https://al-burlachenko.github.io/drill-project",
   "scripts": {
-    "start": "node index.js",
-    "dev": "parcel src/*.html",
-    "prebuild": "npx rimraf build",
-    "build": "parcel build src/*.html --public-url /drill-project/"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /drill-project/"
   },
   "repository": {
     "type": "git",
