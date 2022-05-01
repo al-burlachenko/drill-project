@@ -2,9 +2,9 @@
   "name": "parcel-project-template",
   "version": "1.1.0",
   "description": "",
-  "main": "index.js",
   "homepage": "https://al-burlachenko.github.io/drill-project",
   "scripts": {
+    "start": "node index.js",
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /drill-project/"
   },
