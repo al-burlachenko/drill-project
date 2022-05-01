@@ -3,20 +3,20 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://al-burlachenko.github.io/drill-project",
+  "homepage": "https://al-burlachenko.github.io/parcel-project-template",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /drill-project/"
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /parcel-project-template/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/al-burlachenko/drill-project.git"
+    "url": "git+https://github.com/al-burlachenko/parcel-project-template.git"
   },
   "keywords": [],
-  "author": "Alexandr Burlachenko <alexander.burlachenko@gmail.com>",
+  "author": "Alexander Burlachenko <alexander.burlachenko@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/al-burlachenko/drill-project/issues"
+    "url": "https://github.com/al-burlachenko/parcel-project-template/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
@@ -26,7 +26,10 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
-    "@parcel/transformer-sass": "^2.5.0",
-    "parcel": "^2.5.0"
+    "resolve-url": "^0.2.1",
+    "source-map-url": "^0.4.1",
+    "svgo": "^2.8.0",
+    "urix": "^0.1.0",
+    "uuid": "^8.3.2"
   }
 }
