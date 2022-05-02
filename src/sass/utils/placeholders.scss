@@ -5,7 +5,7 @@
   font-weight: $weight;
   font-style: normal;
 
-  color: red;
+  // color: red;
   //   letter-spacing: ;
 }
 
@@ -31,3 +31,15 @@
 // %h6-font {
 //   @include font-mixin(12px, $h6-height, $h6-weight);
 // }
+
+%h1-font-mobile {
+  @include font-mixin(22px, 26px, 500);
+}
+
+%h2-font-mobile {
+  @include font-mixin(16px, 19px, 600);
+}
+
+%h3-font-mobile {
+  @include font-mixin(14px, 20px, 400);
+}
