@@ -1,0 +1,99 @@
+@import './utils/fonts';
+@import './utils/colors';
+
+.footer {
+  &__feedback {
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 0px 31px 12px;
+    margin-bottom: 74px;
+
+    background: $white-color;
+    box-shadow: 0px 4px 63px rgba(165, 165, 165, 0.25);
+    border-radius: 10px;
+    &-title {
+      @include font-mixin(20px, 24px, 600);
+      margin-bottom: 13px;
+    }
+    &-description {
+      @extend %h3-font-mobile;
+      color: $inactive-color;
+      margin-bottom: 16px;
+    }
+    &-btn {
+      align-self: center;
+
+      @extend %h2-font-mobile;
+      font-weight: 700;
+      width: 300px;
+      height: 50px;
+      box-shadow: 0px 4px 20px rgba(13, 77, 42, 0.33);
+      border-radius: 10px;
+
+      color: $white-color;
+      background-color: $default-color;
+      //imitating padding-bottom: 8.5px without increasing btn size:
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 300px;
+        height: 8.5px;
+        right: 0;
+        bottom: -8.5px;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    @extend %logo-font;
+    line-height: 1.167;
+    color: $primary-color;
+    margin-bottom: 28px;
+    & > span {
+      color: $default-color;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 28px;
+    &-item {
+      @include font-mixin(18px, 30px, 500);
+      color: $primary-color;
+      margin-bottom: 12px;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__contacts {
+    &-heading {
+      @include font-mixin(16px, 15px, 400);
+      color: $default-color;
+      margin-bottom: 27px;
+    }
+    &-list {
+      margin-bottom: 69px;
+    }
+    &-list-item {
+      @extend %h2-font-mobile;
+      font-weight: 400px;
+      margin-bottom: 23px;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__copywrite {
+    @include font-mixin(16px, 30px, 400);
+    color: #afb5c0;
+  }
+}
+
+.footer-wrapearound {
+  padding: 74px 75px 20px 12px;
+}

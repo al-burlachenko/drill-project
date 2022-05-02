@@ -16,10 +16,11 @@
   &__logo {
     @extend %logo-font;
     color: $primary-color;
+    & > span {
+      color: $default-color;
+    }
   }
-  &__logo > span {
-    color: $default-color;
-  }
+
   &__menu {
     display: none;
   }
