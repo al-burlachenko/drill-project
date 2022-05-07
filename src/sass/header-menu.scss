@@ -1,0 +1,57 @@
+@import './utils/fonts';
+@import './utils/colors';
+
+// .navigation {
+//   &__menu {
+//     display: block;
+//   }
+// }
+
+.modal {
+  padding: 95px 4px 0px 12px;
+  //   &__header {
+  //     display: flex;
+  //   }
+  //   &__logo {
+  //     margin-right: auto;
+  //     @extend %logo-font;
+  //     color: $primary-color;
+  //     & > span {
+  //       color: $default-color;
+  //     }
+  //   }
+  //   &__language-layout {
+  //     margin-right: 25px;
+  //   }
+  &__close-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__contact {
+    display: block;
+    margin-top: 22px;
+  }
+}
+
+.modal__nav {
+  margin-top: 48px;
+  &-item {
+    margin-top: 30px;
+  }
+  &-link {
+    margin-top: 30px;
+  }
+  &__nav-item-submenu {
+  }
+}
+
+.modal-submenu {
+  outline: 1px solid rebeccapurple;
+  padding: 26px 29px 0px 51px;
+  &__item {
+    margin-bottom: 28px;
+  }
+  &__link {
+  }
+}
