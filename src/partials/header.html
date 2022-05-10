@@ -1,26 +1,46 @@
-<header>
-  <div class="container header">
-    <nav class="navigation">
-      <a href="#" class="navigation__logo"><span>Scientific</span>Equipment</a>
-      <ul class="navigation__menu menu">
-        <li class="menu__item">Главная</li>
-        <li class="menu__item">Оборудование</li>
-        <li class="menu__item">О нас</li>
-      </ul>
-    </nav>
-
-    <a href="mailto:scienteq.pro@gmail.com" class="contact">scienteq.pro@gmail.com</a>
-
+<div class="container header">
+  <div class="header__layout">
+    <a href="#" class="logo"><span>Scientific</span>Equipment</a>
     <ul class="header__language-layout language-layout">
       <li class="language-layout__item">ru</li>
-      <!-- <li class="language-layout__item">eng</li>
-    <li class="language-layout__item">chi</li> -->
     </ul>
 
-    <button type="menu" class="menu-btn">
-      <svg width="16" height="14">
+    <button type="button" class="close-btn menu-btn">
+      <svg width="16" height="16" class="burger-icon is-open">
         <use href="./images/svg/burger-menu.svg#burger-btn"></use>
+      </svg>
+      <svg width="16" height="16" class="close-icon">
+        <use href="./images/svg/Close-btn.svg#close-btn" />
       </svg>
     </button>
   </div>
-</header>
+  <div class="header__menu-layout">
+    <nav class="header__navigation">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#" class="header__nav-link">Главная</a></li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">Оборудование</a>
+          <ul class="header__nav-item-submenu header-submenu">
+            <li class="header-submenu__item">
+              <a href="#" class="header-submenu__link"
+                >Переносной мотобур для отбора ориентированных образцов ПМБ-2б</a
+              >
+            </li>
+            <li class="header-submenu__item">
+              <a href="#" class="header-submenu__link">Бак переносной с ручным насосом</a>
+            </li>
+            <li class="header-submenu__item">
+              <a href="#" class="header-submenu__link"
+                >Безрезьбовая буровая коронка с алмазным наконечником</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">О нас</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="mailto:scienteq.pro@gmail.com" class="header__contact">scienteq.pro@gmail.com</a>
+  </div>
+</div>

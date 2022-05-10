@@ -1,34 +1,91 @@
 @import './utils/fonts';
 @import './utils/colors';
 
+.logo {
+  @extend %logo-font;
+  color: $primary-color;
+  & > span {
+    color: $default-color;
+  }
+}
+
 .header {
-  padding: 12px 4px 18px 12px;
-  display: flex;
-  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &__layout {
+    padding: 12px 4px 18px 12px;
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    background-color: $background-color;
+    top: -1px;
+    left: 0;
+
+    height: 73px; // !!!
+    width: 100%;
+  }
+
+  &__menu-layout {
+    display: none;
+    position: fixed;
+    top: 71px; // -2px с header__layout
+    left: 0;
+    height: calc(100vh - 72px);
+    width: 100vw;
+    padding: 43px 29px 0px 12px;
+
+    background-color: $background-color;
+
+    z-index: 999;
+  }
+
+  &__navigation {
+    // opacity: 1;
+    // visibility: visible;
+  }
+
+  &__contact {
+    display: block;
+    margin-top: 22px;
+    @include font-mixin(16px, 19px, 400);
+  }
 
   &__language-layout {
     margin-right: 25px;
+    margin-left: auto;
   }
 }
 
-.navigation {
-  margin-right: auto;
-  &__logo {
-    @extend %logo-font;
-    color: $primary-color;
-    & > span {
+.header__nav {
+  margin-top: 48px;
+  &-item {
+    margin-top: 30px;
+    color: $inactive-color;
+    @extend %h1-font-mobile;
+    &:first-child {
+      margin-top: 0;
       color: $default-color;
     }
   }
-
-  &__menu {
-    display: none;
+  &-link {
+    margin-top: 30px;
   }
+  // &__nav-item-submenu {
+  // }
 }
 
-.menu {
+.header-submenu {
+  display: none;
+  padding: 26px 29px 0px 51px;
+
   &__item {
+    margin-bottom: 28px;
+    @include font-mixin(16px, 19px, 400);
   }
+  // &__link {
+  // }
 }
 
 .language-layout {
@@ -38,12 +95,14 @@
   background-color: $default-color;
   box-shadow: 0px 4px 20px rgba(13, 77, 42, 0.33);
   border-radius: 4px;
+
   &__item {
     @extend %h5-font;
     color: $white-color;
     text-align: center;
     text-transform: capitalize;
   }
+
   &__item::after {
     content: '';
     display: inline-block;
@@ -58,13 +117,17 @@
   }
 }
 
-.menu-btn {
+.menu-btn,
+.close-btn {
   width: 32px;
   height: 32px;
-
-  // padding: 9px 8px;
 }
 
-.contact {
+.close-icon,
+.burger-icon {
   display: none;
+}
+
+.is-open {
+  display: block;
 }
